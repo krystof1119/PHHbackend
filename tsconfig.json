@@ -4,7 +4,7 @@
     "lib": [
       "es2017"
     ],
-    "target": "es3",
+    "target": "es2017",
     "allowJs": false,
     "sourceMap": true,
     "outDir": "build",
