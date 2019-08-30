@@ -5,10 +5,11 @@ import CONFIG from './config';
 import {buildSchema} from "type-graphql";
 import {GraphQLSchema} from "graphql";
 import * as graphqlHTTP from "express-graphql";
+import DataResolver from "./graphql/resolvers/dataResolver";
 
 async function main(): Promise<void> {
     let schema : GraphQLSchema = await buildSchema({
-        resolvers: []
+        resolvers: [DataResolver]
     });
 
 
