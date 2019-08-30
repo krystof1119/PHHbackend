@@ -1,5 +1,6 @@
 import 'reflect-metadata';
 import * as express from 'express';
+import * as cors from 'cors';
 import CONFIG from './config';
 import {buildSchema} from "type-graphql";
 import {GraphQLSchema} from "graphql";
@@ -13,6 +14,8 @@ async function main(): Promise<void> {
 
 
     const app: express.Application = express();
+
+    app.use(cors());
 
     app.use('/graphql', graphqlHTTP({schema, graphiql: true}));
 
