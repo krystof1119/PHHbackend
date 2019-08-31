@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  node:
+    build: .
+    ports:
+      - "7589:7589"
+    restart: always
+    depends_on:
+      - zork
+  zork:
+    build: ./zork
+    restart: always
