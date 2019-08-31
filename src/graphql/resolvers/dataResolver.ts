@@ -6,6 +6,6 @@ import findAndExecuteBestAction from "../../findAndExecuteBestAction";
 export default class DataResolver {
     @Query(() => String)
     async res(@Arg('var') val: string, @Arg('browserId') browserId: string): Promise<string> {
-        return findAndExecuteBestAction(val);
+        return findAndExecuteBestAction(val, browserId);
     }
 }
