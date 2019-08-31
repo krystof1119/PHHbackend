@@ -19,7 +19,7 @@ export default function text(req: Request, res: Response) {
             //eh
         }
     }
-    zork.stdin.write(req.body.text);
+    zork.stdin.write(req.body.text + '\n');
     console.log(req.body.text);
     let toSend : string = '';
     zork.stdout.on('data', data => {
