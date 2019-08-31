@@ -3,6 +3,10 @@
 This repository houses the backend for my Programmer Humor Hackathon submission.
 
 
+## Prerequisites
+
+Have node.js, yarn, docker and docker-compose installed
+
 ## How to run
 
 1. Acquire a copy of this code (preferably with git)
