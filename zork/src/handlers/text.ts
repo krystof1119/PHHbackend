@@ -12,7 +12,7 @@ export default function text(req: Request, res: Response) {
     console.log(2);
     let zork : ChildProcess = global.instances[req.body.id];
     if (!zork) {
-        res.status(404).send('Invalid id');
+        res.send({text: 'Invalid id'});
         try {
             delete global.instances[req.body.id];
         } catch (e) {
