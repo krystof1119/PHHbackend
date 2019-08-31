@@ -1,7 +1,7 @@
 import {Request, Response} from "express";
 
 import {ZorkGlobal} from '../globalvar';
-import {ChildProcess, spawn} from "child_process";
+import {ChildProcess} from "child_process";
 declare let global: ZorkGlobal;
 
 export default function text(req: Request, res: Response) {
