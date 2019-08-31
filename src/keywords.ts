@@ -1,3 +1,5 @@
+import enterZork from "./zork/enterZork";
+
 interface Keywords {
     [key: string]: Function
 }
@@ -18,6 +20,9 @@ let keywords: Keywords = {
         a
         multiline
         string`;
+    },
+    'adventure': async function adventure(val: string, browserId: string): Promise<string> {
+        return enterZork(browserId);
     }
 };
 
