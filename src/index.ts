@@ -7,7 +7,11 @@ import {GraphQLSchema} from "graphql";
 import * as graphqlHTTP from "express-graphql";
 import DataResolver from "./graphql/resolvers/dataResolver";
 
+import {InstancesGlobal} from "./globalvar";
+declare var global : InstancesGlobal;
+
 async function main(): Promise<void> {
+    global.instances = {};
     let schema : GraphQLSchema = await buildSchema({
         resolvers: [DataResolver]
     });
