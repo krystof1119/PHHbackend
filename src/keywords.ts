@@ -11,6 +11,13 @@ let keywords: Keywords = {
     },
     'test': async function test() : Promise<string> {
         return 'I see you are testing.';
+    },
+    'multiline': async function multiline(): Promise<string> {
+        return `This
+        is
+        a
+        multiline
+        string`;
     }
 };
 
